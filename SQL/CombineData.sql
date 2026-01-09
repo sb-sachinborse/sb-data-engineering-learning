@@ -12,11 +12,7 @@
 		--Left anti join
 		--Right anti join
 
--- SET Operators
-	-- Union
-	-- Union All
-	-- Except
-	-- Intersect
+
 
 SELECT *
 FROM customers
@@ -155,3 +151,53 @@ FROM customers AS c
 LEFT JOIN orders AS o
 ON c.id = o.customer_id
 where o.customer_id IS NOT NULL
+
+
+--Cross join 
+/*Combines every row from left and every row from right table all possible combination - Cartersian join
+*/
+
+SELECT *
+FROM customers 
+CROSS JOIN orders;
+
+
+
+-- ************MULTI JOIN*********************
+
+USE SalesDB
+
+SELECT *
+FROM Sales.Customers;
+SELECT *
+FROM Sales.Orders;
+SELECT *
+FROM Sales.Products;
+SELECT *
+FROM Sales.Employees;
+SELECT *
+FROM Sales.OrdersArchive;
+
+
+
+/*
+	using SalesDB , Retrive a list of all orders ,along with the
+	relatd customer, product, and employee details.
+*/
+
+SELECT 
+	O.OrderID,
+	O.Sales,
+	C.FirstName AS customer_firstName,
+	C.LastName AS customer_lastName ,
+	P.Product,
+	p.Price,
+	E.FirstName AS employee_firstName,
+	E.LastName As employee_lastName
+FROM Sales.Orders AS O
+LEFT JOIN Sales.Products AS P
+ON O.ProductID = P.ProductID
+LEFT JOIN Sales.Customers AS C
+ON C.CustomerID = O.CustomerID
+LEFT JOIN Sales.Employees AS E
+ON E.EmployeeID = O.SalesPersonID

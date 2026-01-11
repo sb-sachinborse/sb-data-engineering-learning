@@ -1,0 +1,9 @@
+#!/bin/sh
+'''exec' "/home/devsachin/Desktop/Data Enginnering/Data Enginnering/Repository/sb-data-engineering-learning/03_etl_pipelines/basic_migration_mssql_to_postgres/migration_sql_to_postgres/migration_venv/bin/python3.10" "$0" "$@"
+' '''
+import sys
+from dotenv.__main__ import cli
+if __name__ == '__main__':
+    if sys.argv[0].endswith('.exe'):
+        sys.argv[0] = sys.argv[0][:-4]
+    sys.exit(cli())

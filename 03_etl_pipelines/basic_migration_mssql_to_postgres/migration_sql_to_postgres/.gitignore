@@ -1,0 +1,23 @@
+# Python cache
+__pycache__/
+*.pyc
+
+# Virtual environment
+migrathion_venv/
+venv/
+.env
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Logs
+*.log
+
+# Docker volumes (local data)
+pgdata/
+
+# OS / Editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

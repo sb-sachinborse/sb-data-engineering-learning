@@ -1,0 +1,10 @@
+#!/bin/sh
+'''exec' "/home/devsachin/Desktop/Data Enginnering/Data Enginnering/Repository/sb-data-engineering-learning/03_etl_pipelines/basic_migration_mssql_to_postgres/migration_sql_to_postgres/migration_venv/bin/python3.10" "$0" "$@"
+' '''
+# -*- coding: utf-8 -*-
+import re
+import sys
+from pip._internal.cli.main import main
+if __name__ == '__main__':
+    sys.argv[0] = re.sub(r'(-script\.pyw|\.exe)?$', '', sys.argv[0])
+    sys.exit(main())

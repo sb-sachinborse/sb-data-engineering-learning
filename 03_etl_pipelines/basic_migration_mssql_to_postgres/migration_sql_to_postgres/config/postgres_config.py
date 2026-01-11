@@ -1,0 +1,17 @@
+
+from dotenv import load_dotenv
+import os
+
+load_dotenv()
+
+
+# Postgres config
+POSTGRES_CONFIG = {
+    "host": os.getenv("POSTGRES_HOST"),
+    "database": os.getenv("POSTGRES_DB"),
+    "user": os.getenv("POSTGRES_USER"),
+    "password": os.getenv("POSTGRES_PASSWORD"),
+    "port": os.getenv("POSTGRES_PORT")
+}
+
+

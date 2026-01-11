@@ -4,5 +4,3 @@ install:
 start-docker:
 	docker-compose up -d 
 
-run-notebook
-	jupyter notebook

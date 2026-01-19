@@ -1,5 +1,7 @@
 # Python virtual environment
 04_spark_pyspark/basics/spark_venv/
+05_airflow/main/airflow_venv/
+05_airflow/main/airflow/.env
 
 # Virtual environments
 
